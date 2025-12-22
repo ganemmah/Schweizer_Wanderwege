@@ -1,0 +1,142 @@
+{
+  "_id": "schweizer_wanderwege",
+  "startUrl": [
+    "https://www.schweizer-wanderwege.ch/de/wandervorschlaege/?criteria%5Bfulltext%5D=&criteria%5Bseasons%5D%5B0%5D=69&page=1",
+    "https://www.schweizer-wanderwege.ch/de/wandervorschlaege/?criteria%5Bfulltext%5D=&criteria%5Bseasons%5D%5B0%5D=69&page=2",
+    "https://www.schweizer-wanderwege.ch/de/wandervorschlaege/?criteria%5Bfulltext%5D=&criteria%5Bseasons%5D%5B0%5D=69&page=3",
+    "https://www.schweizer-wanderwege.ch/de/wandervorschlaege/?criteria%5Bfulltext%5D=&criteria%5Bseasons%5D%5B0%5D=69&page=4",
+    "https://www.schweizer-wanderwege.ch/de/wandervorschlaege/?criteria%5Bfulltext%5D=&criteria%5Bseasons%5D%5B0%5D=69&page=5",
+    "https://www.schweizer-wanderwege.ch/de/wandervorschlaege/?criteria%5Bfulltext%5D=&criteria%5Bseasons%5D%5B0%5D=69&page=6",
+    "https://www.schweizer-wanderwege.ch/de/wandervorschlaege/?criteria%5Bfulltext%5D=&criteria%5Bseasons%5D%5B0%5D=69&page=7",
+    "https://www.schweizer-wanderwege.ch/de/wandervorschlaege/?criteria%5Bfulltext%5D=&criteria%5Bseasons%5D%5B0%5D=69&page=8",
+    "https://www.schweizer-wanderwege.ch/de/wandervorschlaege/?criteria%5Bfulltext%5D=&criteria%5Bseasons%5D%5B0%5D=69&page=9",
+    "https://www.schweizer-wanderwege.ch/de/wandervorschlaege/?criteria%5Bfulltext%5D=&criteria%5Bseasons%5D%5B0%5D=69&page=10",
+    "https://www.schweizer-wanderwege.ch/de/wandervorschlaege/?criteria%5Bfulltext%5D=&criteria%5Bseasons%5D%5B0%5D=69&page=11",
+    "https://www.schweizer-wanderwege.ch/de/wandervorschlaege/?criteria%5Bfulltext%5D=&criteria%5Bseasons%5D%5B0%5D=69&page=12",
+    "https://www.schweizer-wanderwege.ch/de/wandervorschlaege/?criteria%5Bfulltext%5D=&criteria%5Bseasons%5D%5B0%5D=69&page=13",
+    "https://www.schweizer-wanderwege.ch/de/wandervorschlaege/?criteria%5Bfulltext%5D=&criteria%5Bseasons%5D%5B0%5D=69&page=14",
+    "https://www.schweizer-wanderwege.ch/de/wandervorschlaege/?criteria%5Bfulltext%5D=&criteria%5Bseasons%5D%5B0%5D=69&page=15",
+    "https://www.schweizer-wanderwege.ch/de/wandervorschlaege/?criteria%5Bfulltext%5D=&criteria%5Bseasons%5D%5B0%5D=69&page=16"
+  ],
+  "selectors": [
+    {
+      "id": "detail_url",
+      "parentSelectors": ["_root"],
+      "type": "SelectorLink",
+      "selector": ".uk-card-title a",
+      "multiple": true,
+      "version": 2,
+      "linkType": "linkFromHref"
+    },
+    {
+      "id": "title",
+      "parentSelectors": ["detail_url"],
+      "type": "SelectorText",
+      "selector": "h1",
+      "multiple": false,
+      "regex": "",
+      "multipleType": "singleColumn",
+      "version": 2
+    },
+    {
+      "id": "location",
+      "parentSelectors": ["detail_url"],
+      "type": "SelectorText",
+      "selector": ".l-hike-title small",
+      "multiple": false,
+      "regex": "",
+      "multipleType": "singleColumn",
+      "version": 2
+    },
+    {
+      "id": "difficulty_level",
+      "parentSelectors": ["detail_url"],
+      "type": "SelectorText",
+      "selector": ".l-metadata-scale span",
+      "multiple": false,
+      "regex": "",
+      "multipleType": "singleColumn",
+      "version": 2
+    },
+    {
+      "id": "duration",
+      "parentSelectors": ["detail_url"],
+      "type": "SelectorText",
+      "selector": "div[uk-tooltip='Wanderzeit']",
+      "multiple": false,
+      "regex": "",
+      "multipleType": "singleColumn",
+      "version": 2
+    },
+    {
+      "id": "distance",
+      "parentSelectors": ["detail_url"],
+      "type": "SelectorText",
+      "selector": "div[uk-tooltip='Distanz']",
+      "multiple": false,
+      "regex": "",
+      "multipleType": "singleColumn",
+      "version": 2
+    },
+    {
+      "id": "physical_demand",
+      "parentSelectors": ["detail_url"],
+      "type": "SelectorText",
+      "selector": "div[uk-tooltip='Körperliche Anforderung']",
+      "multiple": false,
+      "regex": "",
+      "multipleType": "singleColumn",
+      "version": 2
+    },
+    {
+      "id": "ascent",
+      "parentSelectors": ["detail_url"],
+      "type": "SelectorText",
+      "selector": "div[uk-tooltip='Aufstieg']",
+      "multiple": false,
+      "regex": "",
+      "multipleType": "singleColumn",
+      "version": 2
+    },
+    {
+      "id": "descent",
+      "parentSelectors": ["detail_url"],
+      "type": "SelectorText",
+      "selector": "div[uk-tooltip='Abstieg']",
+      "multiple": false,
+      "regex": "",
+      "multipleType": "singleColumn",
+      "version": 2
+    },
+    {
+      "id": "target_group",
+      "parentSelectors": ["detail_url"],
+      "type": "SelectorText",
+      "selector": "div.l-metadata-suitability",
+      "multiple": false,
+      "regex": "",
+      "multipleType": "singleColumn",
+      "version": 2
+    },
+    {
+      "id": "season",
+      "parentSelectors": ["detail_url"],
+      "type": "SelectorText",
+      "selector": "div[uk-tooltip='Saison']",
+      "multiple": false,
+      "regex": "",
+      "multipleType": "singleColumn",
+      "version": 2
+    },
+    {
+      "id": "recommended_period",
+      "parentSelectors": ["detail_url"],
+      "type": "SelectorText",
+      "selector": "div[uk-tooltip='besonders geeignete Monate']",
+      "multiple": false,
+      "regex": "",
+      "multipleType": "singleColumn",
+      "version": 2
+    }
+  ]
+}
