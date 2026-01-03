@@ -50,12 +50,12 @@ sns.set_palette('Set2')
 ```python
 plt.rcParams['figure.figsize'] = (12, 6)
 ```
-**Erklärung:** Setzt die Standard-Größe für alle Diagramme auf 12 Zoll Breite und 6 Zoll Höhe. Dies macht die Plots groß genug, um Details zu erkennen.
+**Erklärung:** Setzt die Standard-Grösse für alle Diagramme auf 12 Zoll Breite und 6 Zoll Höhe. Dies macht die Plots gross genug, um Details zu erkennen.
 
 ```python
 plt.rcParams['font.size'] = 11
 ```
-**Erklärung:** Setzt die Standard-Schriftgröße für alle Text-Elemente in Diagrammen auf 11 Punkte.
+**Erklärung:** Setzt die Standard-Schriftgrösse für alle Text-Elemente in Diagrammen auf 11 Punkte.
 
 ---
 
@@ -460,7 +460,7 @@ plt.axvline(df['duration_min'].median(), color='green', linestyle='--', linewidt
 ```python
 plt.xlabel('Dauer (Minuten)', fontsize=12)
 ```
-**Erklärung:** Setzt die Beschriftung der x-Achse mit Schriftgröße 12.
+**Erklärung:** Setzt die Beschriftung der x-Achse mit Schriftgrösse 12.
 
 ```python
 plt.ylabel('Häufigkeit', fontsize=12)
@@ -471,7 +471,7 @@ plt.ylabel('Häufigkeit', fontsize=12)
 plt.title('Verteilung der Wanderdauer', fontsize=14, fontweight='bold')
 ```
 **Erklärung:** Setzt den Titel:
-- `fontsize=14` = Größer als normale Schrift
+- `fontsize=14` = Grösser als normale Schrift
 - `fontweight='bold'` = Fettdruck
 
 ```python
@@ -584,7 +584,7 @@ scatter = plt.scatter(df['distance_km'], df['duration_min'], c=colors, cmap='vir
 - `df['duration_min']` = y-Werte
 - `c=colors` = Farben basierend auf Schwierigkeit
 - `cmap='viridis'` = Colormap (Farbschema)
-- `s=50` = Punktgröße
+- `s=50` = Punktgrösse
 - `edgecolors='black'` = Schwarzer Rand um jeden Punkt
 
 ```python
@@ -646,7 +646,7 @@ sns.heatmap(correlation_matrix, annot=True, fmt='.3f', cmap='coolwarm',
 - `annot=True` = Zeigt Zahlen in den Zellen
 - `fmt='.3f'` = Format: 3 Dezimalstellen
 - `cmap='coolwarm'` = Farbschema (blau=negativ, rot=positiv)
-- `center=0` = 0 wird weiß dargestellt
+- `center=0` = 0 wird weiss dargestellt
 - `square=True` = Quadratische Zellen
 - `linewidths=1` = Trennlinien zwischen Zellen
 - `cbar_kws={"shrink": 0.8}` = Colorbar auf 80% Höhe
@@ -739,7 +739,7 @@ plt.legend(title='Schwierigkeitsgrad', bbox_to_anchor=(1.05, 1), loc='upper left
 ```
 **Erklärung:** Positioniert Legende:
 - `title=...` = Titel der Legende
-- `bbox_to_anchor=(1.05, 1)` = Position außerhalb des Plots (rechts oben)
+- `bbox_to_anchor=(1.05, 1)` = Position ausserhalb des Plots (rechts oben)
 - `loc='upper left'` = Ankerpunkt der Legende-Box
 
 ```python
@@ -846,7 +846,7 @@ print(os.name.upper())
 ```
 **Erklärung:** 
 - `os.name` = Name des Betriebssystems ('nt' für Windows, 'posix' für Linux/Mac)
-- `.upper()` = Wandelt in Großbuchstaben um
+- `.upper()` = Wandelt in Grossbuchstaben um
 
 ```python
 print(platform.system(), '|', platform.release())
