@@ -55,7 +55,7 @@ def read_from_db(query):
     """
     engine = get_db_engine()
     df = pd.read_sql(query, con=engine)
-    print(f"✅ Loaded {len(df)} rows, {df.shape[1]} columns from database")
+    print(f"Loaded {len(df)} rows, {df.shape[1]} columns from database")
     return df
 
 
@@ -85,7 +85,7 @@ def write_to_db(df, table_name, if_exists='replace'):
         method='multi'
     )
 
-    print(f"✅ Successfully stored {len(df)} rows in table '{table_name}'")
+    print(f"Successfully stored {len(df)} rows in table '{table_name}'")
     return len(df)
 
 
@@ -109,7 +109,7 @@ def setup_display_settings(float_format='{:.2f}', precision=2):
     # Suppress warnings
     warnings.filterwarnings("ignore")
 
-    print("✅ Display settings configured")
+    print("Display settings configured")
 
 
 def setup_visualization_settings(style='seaborn-v0_8-darkgrid', palette='Set2',
@@ -131,7 +131,7 @@ def setup_visualization_settings(style='seaborn-v0_8-darkgrid', palette='Set2',
     plt.rcParams['figure.figsize'] = figsize
     plt.rcParams['font.size'] = fontsize
 
-    print("✅ Visualization settings configured")
+    print("Visualization settings configured")
 
 
 # ============================================================================

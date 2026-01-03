@@ -223,7 +223,7 @@ print("INTERPRETATION:")
 **Erklärung:** Gibt eine Überschrift für die Interpretation aus.
 
 ```python
-print(f"• Durchschnittliche Wanderdauer: {df['duration_min'].mean():.0f} Minuten ({df['duration_min'].mean()/60:.1f} Stunden)")
+print(f"- Durchschnittliche Wanderdauer: {df['duration_min'].mean():.0f} Minuten ({df['duration_min'].mean()/60:.1f} Stunden)")
 ```
 **Erklärung:** Berechnet und gibt die durchschnittliche Wanderdauer aus.
 - `df['duration_min'].mean()` = Berechnet den Durchschnitt der Dauer-Spalte
@@ -232,17 +232,17 @@ print(f"• Durchschnittliche Wanderdauer: {df['duration_min'].mean():.0f} Minut
 - `:.1f` = Formatierung: 1 Dezimalstelle
 
 ```python
-print(f"• Durchschnittliche Distanz: {df['distance_km'].mean():.1f} km")
+print(f"- Durchschnittliche Distanz: {df['distance_km'].mean():.1f} km")
 ```
 **Erklärung:** Berechnet und gibt die durchschnittliche Distanz mit 1 Dezimalstelle aus.
 
 ```python
-print(f"• Durchschnittlicher Aufstieg: {df['ascent_m'].mean():.0f} m")
+print(f"- Durchschnittlicher Aufstieg: {df['ascent_m'].mean():.0f} m")
 ```
 **Erklärung:** Berechnet und gibt den durchschnittlichen Aufstieg ohne Dezimalstellen aus.
 
 ```python
-print(f"• Durchschnittlicher Abstieg: {df['descent_m'].mean():.0f} m")
+print(f"- Durchschnittlicher Abstieg: {df['descent_m'].mean():.0f} m")
 ```
 **Erklärung:** Berechnet und gibt den durchschnittlichen Abstieg ohne Dezimalstellen aus.
 
@@ -316,7 +316,7 @@ for i in range(len(correlation_matrix.columns)):
 ```python
     for j in range(i+1, len(correlation_matrix.columns)):
 ```
-**Erklärung:** Innere Schleife, die nur über Spalten NACH der aktuellen Spalte iteriert. Dies vermeidet Duplikate (z.B. beide: A↔B und B↔A).
+**Erklärung:** Innere Schleife, die nur über Spalten NACH der aktuellen Spalte iteriert. Dies vermeidet Duplikate (z.B. beide: A<->B und B<->A).
 
 ```python
         corr_pairs.append((
@@ -342,13 +342,13 @@ corr_pairs_sorted = sorted(corr_pairs, key=lambda x: abs(x[2]), reverse=True)
 ```python
 print("\nStärkste Korrelationen:")
 for var1, var2, corr_val in corr_pairs_sorted[:3]:
-    print(f"• {var1} ↔ {var2}: {corr_val:.3f}")
+    print(f"- {var1} <-> {var2}: {corr_val:.3f}")
 ```
 **Erklärung:** 
 - `corr_pairs_sorted[:3]` = Nimmt die ersten 3 Paare
 - Schleife entpackt jedes Tupel in var1, var2, corr_val
 - Gibt jedes Paar mit 3 Dezimalstellen aus
-- `↔` ist ein Unicode-Zeichen für Doppelpfeil
+- `<->` ist ein Unicode-Zeichen für Doppelpfeil
 
 ---
 
@@ -765,39 +765,39 @@ print()
 
 ```python
 print("DATENÜBERSICHT:")
-print(f"   • Anzahl Wanderwege: {len(df)}")
+print(f"- Anzahl Wanderwege: {len(df)}")
 ```
 **Erklärung:** Gibt die Gesamtzahl der Wanderwege aus. Die Leerzeichen am Anfang erzeugen Einrückung.
 
 ```python
-print(f"   • Anzahl Kantone: {df['canton'].nunique()}")
+print(f"- Anzahl Kantone: {df['canton'].nunique()}")
 ```
 **Erklärung:** `.nunique()` = Zählt die Anzahl eindeutiger (unique) Werte.
 
 ```python
-print(f"   • Schwierigkeitsgrade: {sorted(df['difficulty_level'].unique())}")
+print(f"- Schwierigkeitsgrade: {sorted(df['difficulty_level'].unique())}")
 ```
 **Erklärung:** Zeigt alle vorhandenen Schwierigkeitsgrade sortiert an.
 
 ```python
-print(f"   • Stärkste Korrelation: {corr_pairs_sorted[0][0]} ↔ {corr_pairs_sorted[0][1]} ({corr_pairs_sorted[0][2]:.3f})")
+print(f"- Stärkste Korrelation: {corr_pairs_sorted[0][0]} <-> {corr_pairs_sorted[0][1]} ({corr_pairs_sorted[0][2]:.3f})")
 ```
 **Erklärung:** Greift auf das erste Element der sortierten Korrelations-Liste zu:
 - `[0]` = Erstes Tupel
 - `[0]`, `[1]`, `[2]` = Erstes, zweites, drittes Element des Tupels
 
 ```python
-print(f"   • Durchschnittliche Wanderzeit: {df['duration_min'].mean()/60:.1f} Stunden")
+print(f"- Durchschnittliche Wanderzeit: {df['duration_min'].mean()/60:.1f} Stunden")
 ```
 **Erklärung:** Berechnet Durchschnitt und rechnet in Stunden um.
 
 ```python
-print(f"   • Max. Aufstieg: {df['ascent_m'].max():.0f} m")
+print(f"- Max. Aufstieg: {df['ascent_m'].max():.0f} m")
 ```
 **Erklärung:** `.max()` = Findet den Maximalwert der Spalte.
 
 ```python
-print(f"   • Korrelation Aufstieg ↔ Abstieg: {df[['ascent_m', 'descent_m']].corr().iloc[0,1]:.3f}")
+print(f"- Korrelation Aufstieg <-> Abstieg: {df[['ascent_m', 'descent_m']].corr().iloc[0,1]:.3f}")
 ```
 **Erklärung:** 
 - `df[['ascent_m', 'descent_m']]` = Wählt beide Spalten aus
@@ -805,14 +805,14 @@ print(f"   • Korrelation Aufstieg ↔ Abstieg: {df[['ascent_m', 'descent_m']].
 - `.iloc[0,1]` = Greift auf Zelle Zeile 0, Spalte 1 zu (Korrelation zwischen den beiden)
 
 ```python
-print(f"   • Top 5 Kantone: {', '.join(top5_cantons.tolist())}")
+print(f"- Top 5 Kantone: {', '.join(top5_cantons.tolist())}")
 ```
 **Erklärung:** 
 - `.tolist()` = Wandelt Series in Python-Liste um
 - `', '.join(...)` = Verbindet Liste zu einem String mit Kommas
 
 ```python
-print(f"   • Führender Kanton: {top5_cantons[0]} ({canton_counts.iloc[0]} Wanderwege)")
+print(f"- Führender Kanton: {top5_cantons[0]} ({canton_counts.iloc[0]} Wanderwege)")
 ```
 **Erklärung:** 
 - `top5_cantons[0]` = Erster Kanton
