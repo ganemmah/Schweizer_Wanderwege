@@ -7,7 +7,7 @@ services:
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: password
-      MYSQL_DATABASE: wanderwege_db
+      MYSQL_DATABASE: hiking_routes_db
     ports:
       - "3306:3306"
     volumes:

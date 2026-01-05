@@ -1,5 +1,5 @@
 {
-  "_id": "schweizer_wanderwege",
+  "_id": "swiss_hiking_routes",
   "startUrl": [
     "https://www.schweizer-wanderwege.ch/de/wandervorschlaege/?criteria%5Bfulltext%5D=&criteria%5Bseasons%5D%5B0%5D=69&page=1",
     "https://www.schweizer-wanderwege.ch/de/wandervorschlaege/?criteria%5Bfulltext%5D=&criteria%5Bseasons%5D%5B0%5D=69&page=2",

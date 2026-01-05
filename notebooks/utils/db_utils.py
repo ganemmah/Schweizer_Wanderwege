@@ -1,5 +1,5 @@
 """
-Utility functions for Schweizer Wanderwege project.
+Utility functions for Swiss Hiking Routes project.
 
 This module provides reusable functions for database operations,
 display settings, and common configurations to reduce code redundancy
@@ -21,7 +21,7 @@ DB_CONFIG = {
     'password': 'password',
     'host': 'localhost',
     'port': '3306',
-    'database': 'wanderwege_db'
+    'database': 'hiking_routes_db'
 }
 
 
@@ -50,7 +50,7 @@ def read_from_db(query):
         pd.DataFrame: Query results as DataFrame
 
     Example:
-        >>> df = read_from_db("SELECT * FROM wanderwege")
+        >>> df = read_from_db("SELECT * FROM hiking_routes")
         >>> print(f"Loaded {len(df)} rows")
     """
     engine = get_db_engine()
@@ -72,7 +72,7 @@ def write_to_db(df, table_name, if_exists='replace'):
         int: Number of rows written
 
     Example:
-        >>> write_to_db(df, 'wanderwege', if_exists='replace')
+        >>> write_to_db(df, 'hiking_routes', if_exists='replace')
     """
     engine = get_db_engine()
 
