@@ -1,4 +1,4 @@
-# Schweizer_Wanderwege
+# Swiss Hiking Routes
 Data Analytics Project
 
 # Setup local environment
@@ -18,7 +18,7 @@ Install the following software on your local machine:
 # Connect to MySQL Database (requires Docker container running)
 1. Open MySQL Workbench.
 2. Create a new connection with the following details:
-   - Connection Name `DA_Schweizer_Wanderwege`
+   - Connection Name `DA_Swiss_Hiking_Routes`
    - Connection Method: Standard (TCP/IP)
    - Hostname: `127.0.0.1`
    - Port: `3306`
